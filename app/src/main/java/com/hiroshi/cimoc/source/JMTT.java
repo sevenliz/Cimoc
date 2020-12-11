@@ -41,7 +41,7 @@ public class JMTT extends MangaParser {
     @Override
     public Request getSearchRequest(String keyword, int page) throws UnsupportedEncodingException {
         if (page != 1) return null;
-        String url = StringUtils.format("https://18comic1.biz/search/photos?search_query=%s&main_tag=0", keyword);
+        String url = StringUtils.format("https://18comic1.bet/search/photos?search_query=%s&main_tag=0", keyword);
         return new Request.Builder().url(url).build();
     }
 
@@ -63,7 +63,7 @@ public class JMTT extends MangaParser {
 
     @Override
     public String getUrl(String cid) {
-        return "https://18comic1.biz" + cid;
+        return "https://18comic1.bet" + cid;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class JMTT extends MangaParser {
 
     @Override
     public Request getInfoRequest(String cid) {
-        String url = "https://18comic1.biz" + cid;
+        String url = "https://18comic1.bet" + cid;
         return new Request.Builder().url(url).build();
     }
 
@@ -117,7 +117,7 @@ public class JMTT extends MangaParser {
     private String imgpath = "";
     @Override
     public Request getImagesRequest(String cid, String path) {
-        String url = "https://18comic1.biz"+path;
+        String url = "https://18comic1.bet"+path;
         imgpath = path;
         return new Request.Builder().url(url).build();
     }
